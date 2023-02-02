@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- //leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+
+    <!-- //leaflet -->
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script defer src="script.js"></script>
+    <title>MitzCafe // Map your hangouts</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="logo">Mitz.Cafe ⛰️</h1>
+      <h2 class="form-helper-hide form-helper">
+        Fill up the inputs and press Enter to submit
+      </h2>
+      <ul class="hangouts">
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label">Type</label>
+            <select class="form__input form__input--type">
+              <option value="coffee">Coffee</option>
+              <option value="lookout">Lookout</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Name</label>
+            <input type="text" class="form__input form__input--name" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Directions</label>
+            <input type="text" class="form__input form__input--directions" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Grade</label>
+            <input
+              type="number"
+              min="1"
+              max="10"
+              class="form__input form__input--grade"
+              placeholder="1-10"
+            />
+          </div>
+          <input type="submit" style="position: absolute; left: -9999px" />
+        </form>
+      </ul>
+
+      <p class="copyright">
+        &copy; Copyright by
+        <a>Dan Yanuka</a>.
+      </p>
+    </div>
+
+    <div id="map"></div>
+  </body>
+</html>
