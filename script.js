@@ -250,4 +250,4 @@ class App {
 }
 
 const app = new App();
-app.reset();
+// app.reset();
